@@ -6,3 +6,5 @@ elif a == b:
     print("==")
 elif a<b:
     print("<")
+    
+print("hi")
