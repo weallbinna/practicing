@@ -1,5 +1,7 @@
-a = int(input())
-c = 0
-for d in range(a+1):
-    c +=d
-print(c)
+import sys
+
+a = int(sys.stdin.readline())
+
+for d in range(1,a+1):
+    a,b = map(int,sys.stdin.readline().split())
+    print(f"Case #{d}: {a} + {b} = {a+b}")
