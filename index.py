@@ -1,3 +1,5 @@
-while True:
-    a,b = map(int,input().split(" "))
-    print(type(a+b))
+import sys
+lines = sys.stdin.readlines()
+for line in lines:
+    A, B = map(int, line.split(" "))
+    print(A+B)
