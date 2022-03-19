@@ -1,16 +1,19 @@
-class minuserror(Exception):
-    def __init__(self, msg):
-        
-        self.msg = msg
-        
-    def __str__(self):    #init 에서 정의한 값을 출력하는 것
-        return self.msg
-        
-try:
-    a = int(input("양수 입력하세요: "))
-    if a<0:
-        raise minuserror("다시 양수 입력해주세요")
-except minuserror as err:
-    print(err)
-finally :
-    print("ㅅㄱ")
+a = list(input())
+b = []
+if len(a)<2:
+    a.insert(0,"0")
+n = 1
+b.append(a[1]) 
+c = list(str(int(a[0]) + int(a[1])))
+if len(c)<2:
+    c.insert(0,"0")
+b.append(c[1])
+while  int(a[0]) != int(b[0]) or int(a[1]) != int(b[1]) :
+    c.clear
+    c = list(str(int(b[0]) + int(b[1])))
+    if len(c)<2:
+        c.insert(0,"0")
+    d = (b[1])
+    b = list(d + c[1])
+    n +=1
+print(n)
